@@ -1,0 +1,476 @@
+/* -------------general--------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: 0;
+}
+html{
+    font-size: 90%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+section{
+  padding: 3rem 5%;
+}
+/* -----------scrollBar------------ */
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--primairy-color);
+}
+
+:root   {
+    --primairy-color: #f5bf23;
+    --second-color : #111;
+    --gris-color : #eee;
+    --white-color : #fff ;
+    --light-bg-color :#666 ; 
+    --box-shadow : 0 0.4rem 5px rgba(0,0,0, 0.1);
+    --box-shadow-2 : 0.4rem 0.4rem  5rem 0.5rem rgba(0,0,0, 0.1);
+}
+
+/* ---------------media querry------------- */
+@media  (max-width:800px){
+  .navbar{
+      position: absolute;
+      left:-100%;
+      top: 100px;  
+      width: 100%;
+      text-align: center;
+  }
+
+  #fa-menu {
+      display: block;
+  }
+  .btn-toggel{
+      background-color: var(--primairy-color);
+  }
+  .navbar-toggel {
+  left:0px;
+  animation: fadInXRight 0.5s ease;
+
+  }
+  .unstyle{
+      flex-direction: column;
+      background-color: var(--gris-color);
+      width: 100%;
+      gap: 10px;
+  }
+  .nav-link{
+      display: block;
+      padding: 10px 0 ;
+  }
+}
+@media (max-width:300px){
+  .header-content{
+      flex-direction: column;
+      gap: 10px;
+  }
+  .navbar{
+      top: 130px;  
+  }
+  .search-form input{
+
+  }
+  .search-form{
+      transform: translateY(30px);
+      margin: auto;
+  } 
+  .contact-nfo{
+    width: 100%;
+  }
+}
+/* @media (min-width:600px){
+    .contact-nfo{
+      height: 10vh;
+    }
+  } */
+/* ---------------commun------------------ */
+.unstyle{
+    list-style: none;
+    display: flex;
+}
+.undecoration{
+    text-decoration: none;
+}
+.container{
+    margin: auto;
+    width: 80%;
+}
+/* -----------------commun hover---------------- */
+.change-color-hover:hover{
+    color: var(--primairy-color);
+}
+.chang-back-G-color-hover:hover{
+    background-color: var(--primairy-color);
+    color: var(--white-color);
+}
+
+/* -----------------home section-------------- */
+.header{
+    position: relative;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    z-index: 100;
+    background-color: var(--white-color);
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+.logo{
+    color: var(--second-color);
+    font-size: 1.5rem;
+}
+.logo span{
+    color: var(--primairy-color);
+    font-weight: 700;
+}
+.nav-link{
+    display: block;
+    padding: 0 10px;
+    color: var(--second-color);
+    transition: color 0.3s;
+    font-weight: 300;
+}
+@keyframes fadInXRight {
+  0%{
+      opacity: 0;
+      left: -10%;
+  }
+}
+.navbar{
+    transition: all 0.3s;
+    z-index: 10;
+}
+.icone{
+    display: flex;
+    gap: 5px;
+}
+.icone > .fa {
+    color: black;
+    background-color: var(--gris-color) ;
+    padding: 10px;
+    transition: background-color 0.3s , color 0.2s;
+}
+.icone > .fa:hover{
+  background-color: var(--primairy-color) ;
+  color: var(--white-color);
+}
+.icone button:nth-child(1) {
+   display: none;
+  }
+  .btn{
+    border: 0;
+  }
+.fa-icone-toggel{
+  background-color: var(--primairy-color);
+  color: var(--white-color);
+}
+/* ---------------------------form  section------------- */
+/* .home-section{
+    display: block;
+    background-image: url(../image/Home/Background.jpg);
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+} */
+
+.Form-section{
+  overflow: hidden;
+}
+  /* -----------------search form + toggel ------------------------- */
+  .search-form{
+    position: absolute;
+    top:-120%;
+    right: 5%;
+    display: flex;
+    justify-content: space-between;
+    transition:all 0.5s ;
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow-2);
+    padding: 10px ;
+    align-items: center;
+    z-index: 10;
+  }
+  .search-form-toggel{
+    top:100px;
+    animation: fadIn 0.5s linear;
+  }
+  .search-form input{
+    /* width: 300px; */
+    border: 0;
+    padding-left: 10px;
+    background-color: var(--gris-color);
+    height: 2rem;
+    max-width: 40rem;
+    width: 80vw;
+    
+  }
+  .search-form .fa-search{
+    background-color: var(--white-color);
+    padding-left: 1rem;
+  }
+  
+  /* ------------------login form + toggel ------------------------- */
+
+  /* ----------scrolling contact info-------------- */
+  .login-form::-webkit-scrollbar{
+    width: 1rem;
+  }
+  .login-form::-webkit-scrollbar-track{
+      background: transparent;
+  }
+  .login-form::-webkit-scrollbar-thumb{
+      background: transparent ;
+  }
+/* ------------------------------------------------------------------------- */
+  .login-form{
+    z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: -170%;
+    transform: translateX(-50%);
+    max-width:40rem;
+    width: 95vw;
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow-2);
+    /* transition: all 0.5s; */
+    text-align: center  ;
+    padding: 2rem;
+  }
+  .login-form-toggel{
+    top: 20%;
+    animation: fadIn 0.5s linear;
+  }
+  @keyframes fadIn {
+    0%{
+        opacity: 0;
+        top: 30%;
+    }
+  }
+  .box-input {
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    margin: 10px 0 ;
+    background-color: var(--gris-color);
+    border: none;
+  }
+  .login-form h2 {
+    text-transform: uppercase;
+    color: var(--second-color);
+  }
+  .flex{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 ;
+  }
+  .bouton{
+    /* width: 100%; */
+    height: 3rem;
+    color: var(--white-color);
+    background-color: var(--second-color);
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  .login-form div:last-child{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .login-form div >a{
+    transition: color 0.3s;
+    color: var(--light-bg-color);
+  }
+  .login-form div p a{
+    transition: color 0.3s;
+    color: var(--primairy-color);
+  }
+  /* -----------contact info----------------------------- */
+  @keyframes fadInXLeft {
+    0%{
+        opacity: 0;
+        right: -10%;
+    }
+  }
+  .contact-nfo{
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    right: 200%;
+    z-index: 10000;
+    height: 100vh;
+    box-shadow: 0 0 0 100vw rgba(0,0,0, 0.8);
+    text-align: center;
+    padding: 0 2rem;
+    overflow-y: scroll;
+
+  }
+  .contact-info-toggel{
+    right: 0;
+    
+    animation: fadInXLeft 0.5s ease ;
+  }
+
+  /* ----------scrolling contact info-------------- */
+  .contact-nfo::-webkit-scrollbar{
+    width: 1rem;
+  }
+  .contact-nfo::-webkit-scrollbar-track{
+      background: transparent;
+  }
+  .contact-nfo::-webkit-scrollbar-thumb{
+      background: transparent ;
+  }
+/* ------------------------------------------------------------------------- */
+  .contact-nfo > div{
+    margin: 4rem 0;
+  }
+  .info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .reseau{
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    width: 100%;
+    position: relative; 
+  }
+
+ 
+  .reseau::after{
+    content: "";
+    width: 110%;
+    height: 0.2rem;
+    background-color: var(--second-color);
+    position: absolute;
+    top: -1.5rem;
+  }
+
+  .contact-nfo .fa:not(.fa-times){
+    color:  var(--second-color);
+    transition: all 0.3s;
+    background-color: var(--gris-color);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 0.5rem;
+  }
+  .contact-nfo .fa:not(.fa-times):hover{
+    background-color: var(--second-color);
+    color: var(--white-color);
+    transform: scale(1.1);
+    /* transform: translateY(-0.5rem); */
+
+  }
+  .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    transition: all 0.5s ;
+    background-color: transparent;
+  }
+  .fa-times:hover{
+    transform:  scale(1.2);
+    transform: rotate(90deg);
+    /* animation: rotaion180 1s ease; */
+  }
+  @keyframes rotaion180 {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(180deg);}
+  }
+
+/* ------------------ home---------------------------------- */
+
+/* --------------------------- get start --------------------------------- */
+.mybutton{
+    display: inline-block;
+    color: var(--white-color);
+    padding:  0.5rem 2rem;
+    background-color: var(--second-color);
+    text-decoration: none;
+}
+
+
+
+/* --------------------------swipper------------------------------- */
+/* .swiper {
+  width: 90%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #666;
+} */
+
+
+
+.swiper .slide{
+  display: flex;
+  justify-content: left;
+  height: 60vh;
+  max-height: 40rem;
+  background-size: cover;
+
+}
+.slide .content{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* background-color: #f5bf23; */
+  width: 30rem;
+  gap: 2rem;
+
+}
+
+
+
+section .content h3{
+  color: var(--second-color);
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+section .content h3 span{
+  color: var(--primairy-color);
+  
+}
+
+.swiper-button-prev{
+  color: var(--white-color);
+  background-color: var(--primairy-color);
+  padding: 2rem;
+  transition: all 0.2s;
+
+}
+.swiper-button-next{
+  color: var(--white-color);
+  background-color: var(--primairy-color);
+  padding: 2rem;
+  transition: all 0.2s;
+}
+.swiper-button-prev:hover{
+  background-color: var(--gris-color);
+}
+.swiper-button-next:hover{
+  background-color: var(--gris-color);
+}
+
+
+

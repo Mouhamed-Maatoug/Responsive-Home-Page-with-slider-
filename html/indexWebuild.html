@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fontawsome icone -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">  
+    <!-- css link -->
+    <link rel="stylesheet" href="../css/styleWeBuild.css"> 
+    <!-- css link swipper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">  
+            <div class="header-content">
+                <a href="" class="logo undecoration">We<span>Build</span></a>
+                <nav class="navbar"  id="navbar">
+                    <ul class="unstyle">
+                        <li><a href="" class="nav-link undecoration change-color-hover">Home</a></li>
+                        <li><a href="" class="nav-link undecoration change-color-hover">About</a></li>
+                        <li><a href="" class="nav-link undecoration change-color-hover">Services</a></li>
+                        <li><a href="" class="nav-link undecoration change-color-hover">Projets</a></li>
+                        <li><a href="" class="nav-link undecoration change-color-hover">Pricing</a></li>
+                        <li><a href="" class="nav-link undecoration change-color-hover">Contact</a></li>
+                        <li><a href="" class="nav-link undecoration change-color-hover">Blog</a></li>
+                    </ul>
+                </nav>
+
+                <div class="icone">
+                    <button class="btn chang-back-G-color-hover fa fa-bars" id="fa-menu" onclick="toggelNavbar()" ></button>
+                    <button class="btn chang-back-G-color-hover fa fa-exclamation-circle" id="btnExclamation" onclick="addContactInfo()" ></button>
+                    <button class="btn chang-back-G-color-hover fa fa-search" id="fa-search" onclick="toggelSearchForm()" ></button>
+                    <button class="btn chang-back-G-color-hover fa fa-user"  id="fa-user" onclick="toggelLoginForm()" ></button>
+                </div><!-- info -->
+            </div> <!--  header-content -->
+        </div><!-- container -->
+    </header>
+    <div class="Form-section">
+       <form class="search-form">
+            <input type="search" name="" id="search-box" placeholder="Search here...">
+            <label for="search-box" class="fa fa-search  change-color-hover"></label>
+       </form>
+       <form action="" class="login-form ">
+            <h2>Login</h2>
+            <input type="email" name="" id="" placeholder="Input your email" class="box-input">
+            <input type="password" name="" id=""  placeholder="Input your password" class="box-input"> 
+            <div class="flex">
+                <div>
+                    <input type="checkbox" name="" id="remember-me">
+                    <label for="remember-me">remember me</label>
+                </div>
+                <a href="" class="change-color-hover undecoration">forgot password ?</a>
+            </div>
+            <div>
+                <input type="submit" value="Login now" class="bouton chang-back-G-color-hover">
+                <p>don't have an account <a href="" class="change-color-hover undecoration">creat one!</a></p>
+            </div>
+       </form>
+       <div class="contact-nfo" id="contact-info">
+        <button class="fa fa-times fa-2x btn" id="fa-close" onclick="removeContactInfo()"></button>
+
+            <div class="info">
+                <i class="fa fa-phone "></i>
+                <h3>phone number</h3>
+                <p>+216 29 272 307</p>
+                <p>+216 28 707 568 </p>
+            </div>
+            <div class="info">
+                <i class="fa fa-envelope"></i>
+                <h3>email adress</h3>
+                <p>maatoug.mouhammed@gmail.com</p>
+                <p>maatougmohamed1994@gmail.com</p>
+            </div>
+            <div class="info">
+                <i class="fa fa-map"></i>
+                <h3>office adress</h3>
+                <p>Tunisia-monastir-moknine</p>
+            </div>
+            <div class="reseau">
+                <a href="" class="fa fa-facebook-f fa-2x undecoration"></a>
+                <a href="" class="fa fa-twitter fa-2x undecoration"></a>
+                <a href="" class="fa fa-instagram fa-2x undecoration"></a>
+                <a href="" class="fa fa-linkedin fa-2x undecoration"></a>
+            </div>
+       </div>
+    </div>
+    <section class="home" id="home">
+        <dive class="home-slide">
+            <!-- <div class="w">
+                <section class="slide" style="background-image: url(../image/Home/Background.jpg);">
+                    <div class="content">
+                        <h3>we provide best services</h3>
+                        <p>lorem ipsum dolor, sit amet constructetur adpisicing elit. Aspernatur beatae iusto paritur
+                            laborum magnam eos !
+                        </p>
+                        <a href="#about" class="mybutton">Get start</a>
+                    </div>
+                </section>
+                <section class="slide" style="background-image: url(../image/Home/Background.jpg);">
+                    <div class="content">
+                        <h3>we provide best services</h3>
+                        <p>lorem ipsum dolor, sit amet constructetur adpisicing elit. Aspernatur beatae iusto paritur
+                            laborum magnam eos !
+                        </p>
+                        <a href="#about" class="mybutton">Get start</a>
+                    </div>
+                </section>
+                <section class="slide" style="background-image: url(../image/Home/Background.jpg);">
+                    <div class="content">
+                        <h3>from concept to creation</h3>
+                        <p>lorem ipsum dolor, sit amet constructetur adpisicing elit. Aspernatur beatae iusto paritur
+                            laborum magnam eos !
+                        </p>
+                        <a href="#about" class="mybutton">Get start</a>
+                    </div>
+                </section>
+                
+            </div> -->
+
+
+            <!-- ------------------------swipper--------------------------- -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <section class="slide" style="background-image: url(../image/Home/Background.jpg);">
+                        <div class="content">
+                            <h3> <span>we</span> make your dream </h3>
+                            <p> <span class="fa fa-quote-left" ></span> lorem ipsum dolor, sit amet constructetur adpisicing elit. Aspernatur beatae iusto paritur
+                                laborum magnam eos ! <span class="fa fa-quote-right" aria-hidden="true"></span>
+                            </p>
+                            <a href="#about" class="mybutton">Get start</a>
+                        </div>
+                    </section>
+                  </div>
+                  <div class="swiper-slide">
+                    <section class="slide" style="background-image: url(../image/Home/Background2.jpg);">
+                        <div class="content">
+                            <h3> <span>from</span> concept to creation</h3>
+                            <p> <span class="fa fa-quote-left" ></span> lorem ipsum dolor, sit amet constructetur adpisicing elit. Aspernatur beatae iusto paritur
+                                laborum magnam eos ! <span class="fa fa-quote-right" aria-hidden="true"></span>
+                            </p>
+                            <a href="#about" class="mybutton">Get start</a>
+                        </div>
+                    </section>
+                  </div>
+                  <div class="swiper-slide">
+                    <section class="slide" style="background-image: url(../image/Home/Background3.jpg);">
+                        <div class="content">
+                            <h3> <span>we</span> provide best services</h3>
+                            <p> <span class="fa fa-quote-left" ></span> lorem ipsum dolor, sit amet constructetur adpisicing elit. Aspernatur beatae iusto paritur
+                                laborum magnam eos ! <span class="fa fa-quote-right" aria-hidden="true"></span>
+                            </p>
+                            
+                            <a href="#about" class="mybutton">Get start</a>
+                        </div>
+                    </section>
+                  </div>
+                  ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+               
+            <!-- ------------------------swipper--------------------------- -->
+
+        </dive>
+    </section>
+    <!-- --------------------script swipper slider---------------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../js/scriptWeBuild.js"></script>
+</body>
+</html>
